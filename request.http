@@ -1,0 +1,30 @@
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Product D",
+  "desc": "Description of product Nn",
+  "price": 2321,
+  "stock": 100,
+  "image": "asdqwe.com"
+}
+###
+
+GET http://localhost:3000/products/yu5u HTTP/1.1
+
+###
+
+PUT http://localhost:3000/products/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Product B",
+  "desc": "Description of product Nn",
+  "price": -12304,
+  "stock": -238,
+  "image": ""
+}
+
+###
+
+DELETE http://localhost:3000/products/5 HTTP/1.1
