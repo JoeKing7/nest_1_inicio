@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Product } from 'src/entities/product.entity';
-import {CreateProductDto, UpdateProductDto} from './../dto/products.dto';
+import { CreateProductDto, UpdateProductDto } from './../dto/products.dto';
 
 @Injectable()
 export class ProductsService {
@@ -58,11 +58,9 @@ export class ProductsService {
     const INDEX = this.products.findIndex((i) => i.id == id);
 
     if (INDEX > -1) {
-
-      this.products.splice(INDEX, 1)
+      this.products.splice(INDEX, 1);
       return this.products;
     }
     throw new NotFoundException(`Product ${id} is not found`);
-
   }
 }
