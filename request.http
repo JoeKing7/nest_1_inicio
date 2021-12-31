@@ -14,7 +14,7 @@ GET http://localhost:3000/products/yu5u HTTP/1.1
 
 ###
 
-GET http://localhost:3000/users HTTP/1.1
+GET http://localhost:3000/users/asdqwe HTTP/1.1
 
 ###
 

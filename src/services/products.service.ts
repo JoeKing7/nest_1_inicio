@@ -57,10 +57,10 @@ export class ProductsService {
   delete(id: number) {
     const INDEX = this.products.findIndex((i) => i.id == id);
 
-    if (INDEX > -1) {
-      this.products.splice(INDEX, 1);
-      return this.products;
+    if (INDEX === -1) {
+      throw new NotFoundException(`Product ${id} is not found`);
     }
-    throw new NotFoundException(`Product ${id} is not found`);
+    this.products.splice(INDEX, 1);
+    return this.products;
   }
 }
